@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jobs for Today</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    nav {
+      background-color: blue;
+      padding: 10px;
+      color: white;
+      
+    }
+    
+    table {
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+    }
+    
+    th {
+      background-color: lightgray;
+    }
+    
+    .next-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: blue;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var nextButton = document.querySelector('.next-button');
+      nextButton.addEventListener('click', function() {
+        window.location.assign("docpage3.html");
+      });
+    });
+  </script>
+</head>
+<body>
+  <nav>
+    <h1>Jobs for Today</h1>
+  </nav>
+  
+  <table>
+    <tr>
+      <th>Patient Abha Number</th>
+      <th>Patient's phone Number</th>
+      <th>Time</th>
+      <th>Room Number</th>
+    </tr>
+    <tr>
+      <td>12345</td>
+      <td>9187932478</td>
+      <td>3:30 pm</td>
+      <td>101</td>
+    </tr>
+    <tr>
+      <td>67890</td>
+      <td>1234567891</td>
+      <td>4:00 pm</td>
+      <td>101</td>
+    </tr>
+    <tr>
+      <td>10428</td>
+      <td>2346578925</td>
+      <td>4:30 pm</td>
+      <td>102</td>
+    </tr>
+    <tr>
+      <td>12043</td>
+      <td>7502938475</td>
+      <td>5:00 pm</td>
+      <td>102</td>
+    </tr>
+    <tr>
+      <td>70433</td>
+      <td>1089375864</td>
+      <td>5:30 pm</td>
+      <td>103</td>
+    </tr>
+  </table>
+  
+  <button class="next-button">Next</button>
+</body>
+</html> 

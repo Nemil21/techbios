@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hospital Records</title>
+  <style>
+    /* Styling for the webpage */
+    body {
+      background-color: black;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    /* Styling for the popup */
+    .popup {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 9999;
+    }
+    
+    .popup-content {
+      background-color: rgba(255, 255, 255, 0.8);
+      width: 300px;
+      height: 200px;
+      border-radius: 5px;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    /* Styling for the input field */
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    
+    /* Styling for the buttons */
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    // Pre-stored entries
+    var preStoredEntries = ["4768", "4769",];
+
+    // Function to assign a random value on page load
+    function assignRandomValue() {
+      var inputField = document.getElementById("inputField");
+      var randomIndex = Math.floor(Math.random() * preStoredEntries.length);
+      inputField.value = preStoredEntries[randomIndex];
+    }
+
+    // Function to handle form submission
+    function handleSubmit(event) {
+      event.preventDefault();
+      var randomIndex = Math.floor(Math.random() * preStoredEntries.length);  
+      var assignedValue = preStoredEntries[randomIndex];
+      alert("You have been assigned: " + assignedValue);
+    }
+  </script>
+</head>
+<body>
+  <!-- Popup -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <h2>Enter Patient's ABHA Number</h2>
+      <input type="text" class="input-field" placeholder="Enter ABHA Number" />
+      <button class="button" onclick="Submit()">Submit</button>
+    </div>
+  </div>
+  <script>
+    function Submit() {
+        handleSubmit(event)  
+    }
+  </script>
+</body>
+</html>

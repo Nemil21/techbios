@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="stylehack2.css">
+</head>
+<body>
+  <div class="container"> 
+    <h1>Login</h1>
+    <form action="login.py" method="POST">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <input type="submit" value="Login" class="submit-btn" onclick="login()">
+    </form>
+  </div>
+  <script>
+    function login(){
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      if(username== "28" && password=="28"){
+        window.location.assign("2ndpage.html");
+        alert("login succesfully done");
+      }
+      if(username== "21" && password=="21"){
+        window.location.assign("docpage2.html");
+        alert("login succesfully done");
+      }
+      else{
+        alert("he password or username you entered is incorrect please enter correct information");
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>
